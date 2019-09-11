@@ -279,7 +279,7 @@ configure(allprojects) { project ->
 			dependency "javax.xml.ws:jaxws-api:2.3.1"
 
 			dependency "org.eclipse.persistence:javax.persistence:2.2.0"
-			
+
 			// Substitute for "javax.management:jmxremote_optional:1.0.1_04" which
 			// is not available on Maven Central
 			dependency "org.glassfish.external:opendmk_jmxremote_optional_jar:1.0-b01-ea"
@@ -418,4 +418,11 @@ configure(rootProject) {
 			}
 		}
 	}
+
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        mavenCentral()
+    }
 }
